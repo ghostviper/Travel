@@ -12,7 +12,7 @@
 <script>
 export default {
     name: 'HomeSwiper',
-    data () {
+    data: function() {
         return {
             swiperOption: {
                 pagination: '.swiper-pagination',
