@@ -21,48 +21,48 @@ export default {
             iconList: [
                 {
                     id: 0,
-                    iconUrl: "https://s.qunarzz.com/train_touch/pictures/icon_rail.png",
-                    iconDesc: "火车票"
+                    iconUrl: "https://s.qunarzz.com/homenode/images/touchheader/piao.png",
+                    iconDesc: "景点门票"
                 },
                 {
                     id: 1,
-                    iconUrl: "https://s.qunarzz.com/train_touch/pictures/icon_rail.png",
-                    iconDesc: "火车票"
+                    iconUrl: "https://s.qunarzz.com/homenode/images/touchheader/flight.png",
+                    iconDesc: "机票"
                 },
                 {
                     id: 2,
-                    iconUrl: "https://s.qunarzz.com/train_touch/pictures/icon_rail.png",
-                    iconDesc: "火车票"
+                    iconUrl: "https://s.qunarzz.com/homenode/images/touchheader/package.png",
+                    iconDesc: "度假"
                 },
                 {
                     id: 3,
-                    iconUrl: "https://s.qunarzz.com/train_touch/pictures/icon_rail.png",
-                    iconDesc: "火车票"
+                    iconUrl: "https://s.qunarzz.com/homenode/images/touchheader/hotel.png",
+                    iconDesc: "酒店"
                 },
                 {
                     id: 4,
-                    iconUrl: "https://s.qunarzz.com/train_touch/pictures/icon_rail.png",
-                    iconDesc: "火车票"
+                    iconUrl: "https://s.qunarzz.com/homenode/images/touchheader/freeTravel.png",
+                    iconDesc: "自由行"
                 },
                 {
                     id: 5,
-                    iconUrl: "https://s.qunarzz.com/train_touch/pictures/icon_rail.png",
-                    iconDesc: "火车票"
+                    iconUrl: "https://picbed.qunarzz.com/7804b43ac02cd0333bd0f866eebd43b3.png",
+                    iconDesc: "一日游"
                 },
                 {
                     id: 6,
-                    iconUrl: "https://s.qunarzz.com/train_touch/pictures/icon_rail.png",
-                    iconDesc: "火车票"
+                    iconUrl: "https://s.qunarzz.com/homenode/images/touchheader/car.png",
+                    iconDesc: "专车自驾"
                 },
                 {
                     id: 7,
-                    iconUrl: "https://s.qunarzz.com/train_touch/pictures/icon_rail.png",
-                    iconDesc: "火车票火车票火车票火车票火车票火车票火车票火车票火车票"
+                    iconUrl: "https://s.qunarzz.com/homenode/images/touchheader/tuan.png",
+                    iconDesc: "旅游团购"
                 },
                 {
                     id: 8,
-                    iconUrl: "https://s.qunarzz.com/train_touch/pictures/icon_rail.png",
-                    iconDesc: "火车票"
+                    iconUrl: "https://s.qunarzz.com/homenode/images/touchheader/travel.png",
+                    iconDesc: "攻略"
                 }
             ]
         }
@@ -86,6 +86,8 @@ export default {
 <style lang='stylus' scoped>
 @import '~styles/variable.styl'
 @import '~styles/mixins.styl'
+.icons 
+    margin-top :.2rem
 .icons >>> .swiper-container
     height : 0
     padding-bottom :50%
