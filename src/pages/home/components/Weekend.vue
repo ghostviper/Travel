@@ -4,7 +4,7 @@
             周末去哪玩
         </div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item of list" :key="item.id">
                 <div class="item-img-wrapper">
                     <img :src="item.imgUrl" alt="" class="item-img">
                 </div>
@@ -20,29 +20,8 @@
 <script>
 export default {
     name: "HomeWeekend",
-    data () {
-        return {
-            recommendList: [
-            {
-                id: "0001",
-                imgUrl: "https://imgs.qunarzz.com/p/p44/1412/3e/3ef2e2df4c8d2553cdb.jpg_256x160_66aa2ab3.jpg",
-                title: "香港-欧洲 10天跟团游",
-                desc: "美景如歌｜纯美东欧4国10天｜渔人堡+CK小镇+布拉格+哈尔施塔特+布达佩斯"
-            },
-            {
-                id: "0002",
-                imgUrl: "https://imgs.qunarzz.com/p/p44/1412/3e/3ef2e2df4c8d2553cdb.jpg_256x160_66aa2ab3.jpg",
-                title: "香港-欧洲 10天跟团游",
-                desc: "美景如歌｜纯美东欧4国10天｜渔人堡+CK小镇+布拉格+哈尔施塔特+布达佩斯"
-            },
-            {
-                id: "0003",
-                imgUrl: "https://imgs.qunarzz.com/p/p44/1412/3e/3ef2e2df4c8d2553cdb.jpg_256x160_66aa2ab3.jpg",
-                title: "香港-欧洲 10天跟团游",
-                desc: "美景如歌｜纯美东欧4国10天｜渔人堡+CK小镇+布拉格+哈尔施塔特+布达佩斯"
-            }
-        ]
-    }
+    props: {
+        list: Array
     }
 }
 </script>
@@ -53,7 +32,6 @@ export default {
     line-height :.8rem
     background :#eee
     text-indent :.2rem
-    margin-top : .2rem
 .item-img-wrapper
     overflow :hidden
     height :0

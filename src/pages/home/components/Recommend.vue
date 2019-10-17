@@ -4,7 +4,7 @@
             热销推荐
         </div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item of list" :key="item.id">
                 <div class="item-img">
                     <img :src="item.imgUrl" alt="" class="item-img">
                 </div>
@@ -21,29 +21,8 @@
 <script>
 export default {
     name: "HomeRecommend",
-    data () {
-        return {
-            recommendList: [
-            {
-                id: "0001",
-                imgUrl: "https://imgs.qunarzz.com/vs_ceph_vs_tts/9a598575-6762-41dc-b832-0bae0e730c45.jpg_r_480x320x90_fcf57c19.jpg",
-                title: "香港-欧洲 10天跟团游",
-                desc: "美景如歌｜纯美东欧4国10天｜渔人堡+CK小镇+布拉格+哈尔施塔特+布达佩斯"
-            },
-            {
-                id: "0002",
-                imgUrl: "https://imgs.qunarzz.com/vs_ceph_vs_tts/9a598575-6762-41dc-b832-0bae0e730c45.jpg_r_480x320x90_fcf57c19.jpg",
-                title: "香港-欧洲 10天跟团游",
-                desc: "美景如歌｜纯美东欧4国10天｜渔人堡+CK小镇+布拉格+哈尔施塔特+布达佩斯"
-            },
-            {
-                id: "0003",
-                imgUrl: "https://imgs.qunarzz.com/vs_ceph_vs_tts/9a598575-6762-41dc-b832-0bae0e730c45.jpg_r_480x320x90_fcf57c19.jpg",
-                title: "香港-欧洲 10天跟团游",
-                desc: "美景如歌｜纯美东欧4国10天｜渔人堡+CK小镇+布拉格+哈尔施塔特+布达佩斯"
-            }
-        ]
-    }
+    props: {
+        list: Array
     }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
     <div class="icons">
-        <swiper class="swiper-container">
+        <swiper class="swiper-container" :options="swiperOption">
             <swiper-slide v-for="page of pages" :key="page.index">
                 <div class="icon" v-for="item of page" :key="item.id">
                     <div class="icon-img">
@@ -16,61 +16,20 @@
 <script>
 export default {
     name: "HomeIcons",
+    props: {
+        list: Array
+    },
     data () {
         return {
-            iconList: [
-                {
-                    id: 0,
-                    iconUrl: "https://s.qunarzz.com/homenode/images/touchheader/piao.png",
-                    iconDesc: "景点门票"
-                },
-                {
-                    id: 1,
-                    iconUrl: "https://s.qunarzz.com/homenode/images/touchheader/flight.png",
-                    iconDesc: "机票"
-                },
-                {
-                    id: 2,
-                    iconUrl: "https://s.qunarzz.com/homenode/images/touchheader/package.png",
-                    iconDesc: "度假"
-                },
-                {
-                    id: 3,
-                    iconUrl: "https://s.qunarzz.com/homenode/images/touchheader/hotel.png",
-                    iconDesc: "酒店"
-                },
-                {
-                    id: 4,
-                    iconUrl: "https://s.qunarzz.com/homenode/images/touchheader/freeTravel.png",
-                    iconDesc: "自由行"
-                },
-                {
-                    id: 5,
-                    iconUrl: "https://picbed.qunarzz.com/7804b43ac02cd0333bd0f866eebd43b3.png",
-                    iconDesc: "一日游"
-                },
-                {
-                    id: 6,
-                    iconUrl: "https://s.qunarzz.com/homenode/images/touchheader/car.png",
-                    iconDesc: "专车自驾"
-                },
-                {
-                    id: 7,
-                    iconUrl: "https://s.qunarzz.com/homenode/images/touchheader/tuan.png",
-                    iconDesc: "旅游团购"
-                },
-                {
-                    id: 8,
-                    iconUrl: "https://s.qunarzz.com/homenode/images/touchheader/travel.png",
-                    iconDesc: "攻略"
-                }
-            ]
+            swiperOption: {
+                autoplay: false
+            }
         }
     },
     computed: {
         pages () {
             const pages = []
-            this.iconList.forEach( (item, index)=> {
+            this.list.forEach( (item, index)=> {
                 const page = Math.floor(index / 8)
                 if (!pages[page]){
                     pages[page] = []
