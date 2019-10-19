@@ -22,7 +22,8 @@ export default {
     },
     data () {
         return {
-            touchStatus: false
+            touchStatus: false,
+            timer: null
         }
     },
     computed: {
@@ -44,12 +45,19 @@ export default {
         },
         handleTouchMove (e) {
             if (this.touchStatus == true) {
-                const startY = this.$refs['A'][0].offsetTop //33
-                const touchY = e.touches[0].clientY - 74  // 172
-                const index = Math.floor((touchY - startY) / 20)
-                if (index >= 0 && index < this.letters.length) {
-                    this.$emit('change', this.letters[index])
+                if (self.timer) {
+                    clearTimeout(this.timer)
+                }else {
+                    this.timer = setTimeout(()=> {
+                        const startY = this.$refs['A'][0].offsetTop //33
+                        const touchY = e.touches[0].clientY - 74  // 172
+                        const index = Math.floor((touchY - startY) / 20)
+                        if (index >= 0 && index < this.letters.length) {
+                            this.$emit('change', this.letters[index])
+                        }
+                    }, 16)
                 }
+                
             }
 
         },
